@@ -1,0 +1,13 @@
+AXIOM-PROOF/2
+kind=symbolic
+logic=QF_LIA_1VAR_AFFINE_PATHS
+backend=axiom-symbolic/0.2.0
+backend.sha256=2d882d39b63eb1dc4fbc2111726a75fcbc0d9bfe44f4d12f79fa22407b0b5791
+spec.sha256=12baa832cd2743a2b82fbfc4c5f2afe08ac17a108750143a9a953e1b7df8c15e
+program.sha256=0a9685634adc372302c043aaf2a1ba744f3602230eab4327a2ea7b7976759b42
+domain.kind=unbounded
+paths=2
+obligations=4
+soundness.scope=exact-for-supported-fragment
+counterexample=none
+verdict=VALID

@@ -1,0 +1,15 @@
+AXIOM-IR/2
+module=abs
+input.0.name=x
+input.0.type=int
+output.name=result
+output.type=int
+domain.x.kind=unbounded
+requires.0.id=req
+requires.0.expr=true
+ensures.0.id=nonnegative
+ensures.0.expr=result >= 0
+ensures.1.id=magnitude
+ensures.1.expr=result == x || result == -x
+objective.0.metric=instructions
+objective.0.direction=min

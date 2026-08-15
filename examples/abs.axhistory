@@ -1,0 +1,13 @@
+AXIOM-CEGIS-HISTORY/1
+iteration.0.candidate=x
+iteration.0.candidate.sha256=fe20a6dcb354ff4a1d31cf23e5d23f66b7266a337895f68f99f6524368ab34a1
+iteration.0.verdict=INVALID
+iteration.0.counterexample=-1
+iteration.1.candidate=neg-x
+iteration.1.candidate.sha256=82e08321d0043123207488659d055ed0f5de78ccfc1f591839c522bcaf5611bf
+iteration.1.verdict=INVALID
+iteration.1.counterexample=1
+iteration.2.candidate=abs-branch
+iteration.2.candidate.sha256=0a9685634adc372302c043aaf2a1ba744f3602230eab4327a2ea7b7976759b42
+iteration.2.verdict=VALID
+iteration.2.counterexample=none

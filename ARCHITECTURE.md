@@ -1,32 +1,28 @@
-# Axiom architecture v0.1
+# Axiom v0.2 architecture
 
 ```text
-human intent (.ax)
-      |
-      v
- axiom-spec --------> AXIOM-IR/1 (.aix)
-                          |
-              +-----------+-----------+
-              |                       |
-              v                       v
-        axiom-synth              axiom-solver
-        (untrusted)               (backend)
+Axiom 0.2 source
+     |
+     v
+AXIOM-IR/2 ----------------------------+
+     |                                  |
+     v                                  |
+candidate generator                     |
+     |                                  |
+     v                                  |
+AXIOM-PROGRAM/2                         |
+     |                                  |
+     +--> axiom-symbolic <--------------+
+              | VALID / counterexample
+              v
+       AXIOM-PROOF/2
               |
               v
-      AXIOM-PROGRAM/1 (.axp)
+      verifier receipt gate
               |
               v
-       axiom-verifier
-              |
-              v
-       AXIOM-PROOF/1 (.axproof) -----> axiom-proof DAG
-              |
-              v
-        axiom-runtime ---- execution commitment ---> axiom-zk-bridge
+          runtime
 ```
 
-## Central invariant
-
-`runtime_accepts(program) => exists receipt . verifier_accepts(spec, program, receipt)`
-
-v0.1 enforces the implication by SHA-256 binding of the exact spec and program bytes in the proof receipt.
+CEGIS makes counterexamples first-class artifacts. The long-term TCB is intended to shrink toward a small proof checker
+plus formally connected execution semantics.

@@ -1,0 +1,12 @@
+AXIOM-PROGRAM/2
+module=abs
+inputs=x
+output=result
+capabilities=
+source.expr=abs-branch
+code:
+LOAD_INPUT r0 x
+NEG r1 r0
+SELECT_NEG_INPUT r2 x r1 r0
+RETURN r2
+end
