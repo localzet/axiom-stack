@@ -21,3 +21,46 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - working-directory: axiom/axiom-cegis
         run: python3 -m unittest discover -s tests -v
+  rust:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: axiom/axiom-stack
+      - uses: dtolnay/rust-toolchain@7e38f4b43b4db5c8dd498af069a4f6196df1d067
+        with:
+          toolchain: 1.98.1
+          components: clippy, rustfmt
+      - working-directory: axiom/axiom-stack
+        run: python3 bootstrap.py --directory ..
+      - name: Проверить все Rust-компоненты
+        shell: bash
+        working-directory: axiom
+        env:
+          CARGO_TARGET_DIR: ${{ runner.temp }}/axiom-target
+        run: |
+          for manifest in axiom-*/Cargo.toml; do
+            cargo build --manifest-path "$manifest" --locked
+            cargo test --manifest-path "$manifest" --locked --all-targets
+            cargo clippy --manifest-path "$manifest" --locked --all-targets -- -D warnings
+            cargo fmt --manifest-path "$manifest" --check
+          done
+      - working-directory: axiom/axiom-stack
+        run: python3 rust-pipeline-smoke.py --bin-dir "$RUNNER_TEMP/axiom-target/debug"
+  formal:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: axiom/axiom-stack
+      - working-directory: axiom/axiom-stack
+        run: python3 bootstrap.py --directory ..
+      - name: Установить проверенную версию Lean
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/lean.tar.zst" https://github.com/leanprover/lean4/releases/download/v4.33.0/lean-4.33.0-linux.tar.zst
+          echo "4b3fb03c29a1e0a253fb1d11f9bae3725f19a0dc6fc09b3ea16d2c9df3349e2c  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.33.0-linux/bin" >> "$GITHUB_PATH"
+      - working-directory: axiom/axiom-formal
+        run: lake build

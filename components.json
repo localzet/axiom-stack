@@ -44,7 +44,7 @@
     {
       "name": "axiom-runtime",
       "url": "https://github.com/localzet/axiom-runtime.git",
-      "revision": "57a5ef6ede469f2347f97548eec82ead39e9f894"
+      "revision": "37de7db725a7598a1b33a93382f233ba193e9ad0"
     },
     {
       "name": "axiom-solver",
@@ -69,7 +69,7 @@
     {
       "name": "axiom-verifier",
       "url": "https://github.com/localzet/axiom-verifier.git",
-      "revision": "b1f328e07afa73752a068e97e1af242852812b1b"
+      "revision": "3cc4605013c1969bda8ed940937697306df24f58"
     },
     {
       "name": "axiom-zk-bridge",

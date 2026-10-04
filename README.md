@@ -53,3 +53,7 @@ python3 reference-v0.2.py
 - [axiom-synth](https://github.com/localzet/axiom-synth)
 - [axiom-verifier](https://github.com/localzet/axiom-verifier)
 - [axiom-zk-bridge](https://github.com/localzet/axiom-zk-bridge)
+
+CI метарепозитория проверяет зафиксированный набор целиком: Python reference/CEGIS/symbolic, сборку и тесты всех 11 Rust-компонентов с Clippy/rustfmt и формальную модель Lean. Зелёный CI подтверждает эти проверки, а не полноту proof coverage или production-готовность исследования.
+
+`rust-pipeline-smoke.py --bin-dir <cargo-target>/debug` проверяет реальный Rust-компилятор, receipt gate и VM совместно с symbolic backend. Он проверяет обычные и граничные `i64`-значения, переполнение и отказ после подмены программы/receipt. Receipt gate пока проверяет согласованность полей и хешей, а не доверенность автора; недоверенные receipt требуют отдельного механизма верификации/аутентификации.
