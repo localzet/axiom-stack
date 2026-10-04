@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "components": [
+    {
+      "name": "axiom-capabilities",
+      "url": "https://github.com/localzet/axiom-capabilities.git",
+      "revision": "af4af88a3d905f0c3f14021ba9cb0672bb89209a"
+    },
+    {
+      "name": "axiom-cegis",
+      "url": "https://github.com/localzet/axiom-cegis.git",
+      "revision": "8152abfb73f4bc740043ba8fbb344a526fd92c11"
+    },
+    {
+      "name": "axiom-formal",
+      "url": "https://github.com/localzet/axiom-formal.git",
+      "revision": "47de2197176521967f7e014a1aa3286e92ccab4e"
+    },
+    {
+      "name": "axiom-ir",
+      "url": "https://github.com/localzet/axiom-ir.git",
+      "revision": "f0d0de3e6b16bd91f85611e1b650315fb912b7aa"
+    },
+    {
+      "name": "axiom-kv-lab",
+      "url": "https://github.com/localzet/axiom-kv-lab.git",
+      "revision": "44c32e1170e62b14d7c8f40cbaf7e1ce0a962677"
+    },
+    {
+      "name": "axiom-node",
+      "url": "https://github.com/localzet/axiom-node.git",
+      "revision": "ccb8c3b989068e71a70b4a422c7dd56b9ffe4bb2"
+    },
+    {
+      "name": "axiom-proof",
+      "url": "https://github.com/localzet/axiom-proof.git",
+      "revision": "d543fafebf0cd1701a9f6c4993b1ffc24cde48d9"
+    },
+    {
+      "name": "axiom-research",
+      "url": "https://github.com/localzet/axiom-research.git",
+      "revision": "bc11876c1bab15c2c9c18228c42ed95c0036f576"
+    },
+    {
+      "name": "axiom-runtime",
+      "url": "https://github.com/localzet/axiom-runtime.git",
+      "revision": "57a5ef6ede469f2347f97548eec82ead39e9f894"
+    },
+    {
+      "name": "axiom-solver",
+      "url": "https://github.com/localzet/axiom-solver.git",
+      "revision": "889f0fb8d588d4b4ce4cb231e065b45902faeef2"
+    },
+    {
+      "name": "axiom-spec",
+      "url": "https://github.com/localzet/axiom-spec.git",
+      "revision": "13607ca4bd28bba8bbb195fe562845492a8da102"
+    },
+    {
+      "name": "axiom-symbolic",
+      "url": "https://github.com/localzet/axiom-symbolic.git",
+      "revision": "f3b9c7fda0174a31dea0ec4349965880b92f1441"
+    },
+    {
+      "name": "axiom-synth",
+      "url": "https://github.com/localzet/axiom-synth.git",
+      "revision": "199a70b7c92c3207f8e6a4c16a6e782fa1f89e7f"
+    },
+    {
+      "name": "axiom-verifier",
+      "url": "https://github.com/localzet/axiom-verifier.git",
+      "revision": "b1f328e07afa73752a068e97e1af242852812b1b"
+    },
+    {
+      "name": "axiom-zk-bridge",
+      "url": "https://github.com/localzet/axiom-zk-bridge.git",
+      "revision": "a4dbb041e8d3869dc704871b09e6ba627b063f16"
+    }
+  ]
+}

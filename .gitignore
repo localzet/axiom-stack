@@ -4,3 +4,17 @@
 .DS_Store
 .idea/
 .vscode/
+
+target/
+
+__pycache__/
+
+*.py[cod]
+
+.lake/
+
+.env
+
+*.key
+
+*.pem
