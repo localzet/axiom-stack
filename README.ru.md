@@ -53,3 +53,7 @@ python3 reference-v0.2.py
 - [axiom-synth](https://github.com/localzet/axiom-synth)
 - [axiom-verifier](https://github.com/localzet/axiom-verifier)
 - [axiom-zk-bridge](https://github.com/localzet/axiom-zk-bridge)
+
+## Авторство
+
+Сопровождающий собственных изменений: **Ivan Zorin (localzet)** — <creator@localzet.com> · https://www.localzet.com. Copyright © 2026 Localzet Group. Исходное авторство и лицензии сторонних компонентов сохраняются. См. [AUTHORS](.github/AUTHORS.md).
