@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Ivan Zorin <creator@localzet.com> (Localzet contributions)
+# SPDX-License-Identifier: MIT
 """Fetch the pinned research components without overwriting local work."""
 from __future__ import annotations
 

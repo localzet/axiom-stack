@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Ivan Zorin <creator@localzet.com> (Localzet contributions)
+# SPDX-License-Identifier: MIT
 """Exercise the Rust compiler, receipt gate and VM against the symbolic backend."""
 from __future__ import annotations
 
